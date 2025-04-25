@@ -43,7 +43,7 @@ A live, interactive dashboard that predicts and visualizes natural disaster risk
 
 ## Demo
 
-A live version is available at: [https://your-app-name.streamlit.app]([https://your-app-name.streamlit.app](https://nydisasterdashboard-bwzwrfd3dhfutlzg8xxmt6.streamlit.app/))
+A live version is available at: [https://your-app-name.streamlit.app](https://nydisasterdashboard-bwzwrfd3dhfutlzg8xxmt6.streamlit.app/)
 
 ---
 
