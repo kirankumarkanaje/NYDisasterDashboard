@@ -25,8 +25,6 @@ A live, interactive dashboard that predicts and visualizes natural disaster risk
 - [Usage](#usage)
 - [Alert System](#alert-system)
 - [Future Enhancements](#future-enhancements)
-- [Contributing](#contributing)
-- [License](#license)
 
 ---
 
@@ -54,7 +52,7 @@ A live version is available at: [NY Disaster Prediction Dashboard](https://nydis
 - **Machine Learning**: scikit-learn (Logistic Regression)  
 - **Data Source**: OpenWeatherMap API  
 - **Hosting**: Streamlit Cloud  
-- **Alerts (Optional)**: SendGrid, Mailgun, or SMS via Twilio  
+- **Alerts (Optional)**: SendGrid
 
 ---
 
@@ -62,7 +60,7 @@ A live version is available at: [NY Disaster Prediction Dashboard](https://nydis
 
 - Python 3.7 or above  
 - An OpenWeatherMap API Key
-- SendGrid or Mailgun API Key for email alerts  
+- SendGrid API Key for email alerts  
 
 ---
 
