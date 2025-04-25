@@ -43,7 +43,7 @@ A live, interactive dashboard that predicts and visualizes natural disaster risk
 
 ## Demo
 
-A live version is available at: [https://your-app-name.streamlit.app](https://nydisasterdashboard-bwzwrfd3dhfutlzg8xxmt6.streamlit.app/)
+A live version is available at: [NY Disaster Prediction Dashboard](https://nydisasterdashboard-bwzwrfd3dhfutlzg8xxmt6.streamlit.app/)
 
 ---
 
@@ -61,8 +61,8 @@ A live version is available at: [https://your-app-name.streamlit.app](https://ny
 ## Prerequisites
 
 - Python 3.7 or above  
-- An OpenWeatherMap API Key (free tier)  
-- (Optional) SendGrid or Mailgun API Key for email alerts  
+- An OpenWeatherMap API Key
+- SendGrid or Mailgun API Key for email alerts  
 
 ---
 
@@ -73,3 +73,85 @@ A live version is available at: [https://your-app-name.streamlit.app](https://ny
    ```bash
    git clone https://github.com/YOUR_USERNAME/NYDisasterDashboard.git
    cd NYDisasterDashboard
+
+2. **Create and activate a virtual environment**
+
+   ```bash
+      python3 -m venv venv
+      source venv/bin/activate    # On Windows: venv\Scripts\activate
+3. **Install dependencies**
+
+   ```bash
+      pip install -r requirements.txt
+
+---
+
+## Configuration
+**Streamlit Secrets**
+
+1. Create a folder named .streamlit in the project root:
+
+   ```bash
+      mkdir -p .streamlit
+      Inside .streamlit, create secrets.toml with your API keys:
+
+2. Inside .streamlit, create secrets.toml with your API keys:
+
+   ```toml
+      OPENWEATHER_API_KEY = "YOUR_OPENWEATHERMAP_API_KEY"
+      # Optional: for email alerts
+      SENDGRID_API_KEY     = "YOUR_SENDGRID_API_KEY"
+      EMAIL_FROM           = "alerts@yourdomain.com"
+      EMAIL_TO             = "recipient@example.com"
+
+3. Add .streamlit/secrets.toml to .gitignore to keep keys private.
+
+---
+
+## Running Locally
+
+   ```bash
+         streamlit run app.py
+         Then open http://localhost:8501 in your browser.
+
+
+```
+---
+
+## Deployment
+
+1. Push your code to a GitHub repository.
+2. Sign in to Streamlit Cloud with GitHub.
+3. Create a new app, point to your repo and branch, set app.py as the entry point.
+4. Add secrets via the Streamlit Cloud dashboard.
+5. Deploy.
+
+---
+
+## Usage
+Select a city from the sidebar (Albany, New York, or Buffalo).
+View current weather data and the predicted disaster risk level.
+(Optional) Click Send Test Alert Email to simulate an alert.
+Refresh data at any time using the Refresh Weather Data button.
+
+---
+
+## Alert System
+This project supports free alerting via:
+
+1. SendGrid (recommended): up to 100 emails/day on free tier
+2. The alert function reads credentials from st.secrets and sends notifications when risk is High.
+
+---
+
+## Future Enhancements
+
+1. Integrate NOAA/NWS alerts for automated triggers.
+2. Replace dummy training data with real historical disaster/climate datasets.
+3. Add more cities/counties and support custom location input.
+4. Enhance map visualizations with GeoJSON layers and choropleth.
+5. Implement scheduled background updates via a job scheduler.
+
+
+
+
