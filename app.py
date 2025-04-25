@@ -39,8 +39,8 @@ def get_weather_data(city):
 # --- Sidebar Inputs ---
 city = st.sidebar.selectbox("Choose a New York City", ["Albany", "New York", "Buffalo"])
 st.sidebar.markdown("### Simulation Controls")
-if st.sidebar.button("Refresh Weather Data"):
-    st.experimental_rerun()
+#if st.sidebar.button("Refresh Weather Data"):
+    #st.experimental_rerun()
 
 # --- Fetch Weather Data ---
 weather_data = get_weather_data(city)
